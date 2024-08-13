@@ -1,0 +1,296 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('../image/bg_1.jpeg'); /* 替换为您的图片URL */
+  background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+  background-position: center; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 防止图片重复 */
+  height: 100vh; /* 最小高度设置为视口高度 */
+  overflow: hidden; /* 如果内容超出，则隐藏多余部分 */
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loading::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ccc;
+  border-top-color: #007BFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 基础样式 */
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #main {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .wrapper {
+    display: flex;
+    width: 200vw;
+    position: relative;
+  }
+  .navigation_bar_wrapper {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content_page_wrapper {
+    width: 50%;
+    min-height: 100vh;
+  }
+  .navigation_bar {
+    background-color: rgb(255, 255, 255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 10px; /* 圆角 */
+    width: 90%;
+    height: 90%;
+  }
+  .bottom_text {
+    display: none;
+  }
+  .content_page_wrapper .content_page .title_bar {
+    width: 100vw;
+    height: 50px;
+    background-color: #282834;
+    display: flex;
+    align-items: center;
+  }
+  .title_bar .back {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FD6A62;
+  }
+  .title_bar .back .icon {
+    font-size: 35px;
+    color: #FFFFFF;
+  }
+  .title_bar .title {
+    margin-left: 5px;
+    color: #FFFFFF;
+    font-size: 24px;
+  }
+  #page_content {
+    width: 100vw;
+    height: calc(100vh - 55px);
+  }
+  .page_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .page_list .item {
+    width: calc(43% - 5px); /* 减去外边距 */
+    box-sizing: border-box;
+    margin: 5px; /* 添加外边距 */
+    background-color: #00000055;
+    display: flex;
+    align-items: center;
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 10px; /* 圆角 */
+    padding: 5px;
+  }
+  .page_list .item .icon_wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #FD6A62;
+    border-radius: 50%; /* 圆角 */
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page_list .item .icon_wrapper .icon {
+    color: #FFFFFF;
+    font-size: 25px;
+  }
+  .page_list .item span {
+     color: #FFFFFF;
+   }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-height: 100vh;
+  }
+  #page_content {
+    width: 100%;
+    height: 100%;
+  }
+  #main {
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wrapper {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: 7.5%;
+  }
+  .navigation_bar_wrapper {
+    width: 25%;
+    height: 100%;
+  }
+  .navigation_bar {
+    background-color: rgb(255, 255, 255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 10px; /* 圆角 */
+    width: 100%;
+    height: 100%;
+  }
+  .content_page_wrapper {
+    width: 70%;
+    height: 100%;
+    margin-left: 5%;
+  }
+  .content_page {
+    background-color: rgb(255, 255, 255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 10px; /* 圆角 */
+    width: 100%;
+    height: 100%;
+  }
+  .bottom_text {
+    color: #FFFFFF;
+    display: block;
+    margin: 5px;
+  }
+  .title_bar {
+    display: none;
+  }
+  
+  .page_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .page_list .item {
+    width: calc(90% - 5px);
+    box-sizing: border-box;
+    margin: 5px; /* 添加外边距 */
+    background-color: #00000055;
+    display: flex;
+    align-items: center;
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 10px; /* 圆角 */
+    padding: 5px;
+  }
+  .page_list .item.active {
+    background-color: #FFFFFF55;
+  }
+  .page_list .item .icon_wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 圆角 */
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page_list .item .icon_wrapper .icon {
+    color: #FFFFFF;
+    font-size: 25px;
+  }
+  .page_list .item span {
+     color: #FFFFFF;
+   }
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual {
+  width: 100%;
+  padding: 5%;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one {
+  display: flex;
+  align-items: center;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .head {
+  width: 50px;
+  height: 50px;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .head .head_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .info .info_m {
+  display: flex;
+  align-itmes: center;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .info .info_m .name {
+  color: #FFFFFF;
+  font-size: 22px;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .info .sgin {
+  font-size: 13px;
+  color: #CCC;
+}
+
+#main .wrapper .navigation_bar_wrapper .navigation_bar .individual .indi_one .info .info_m .tag {
+  color: #FFFFFF;
+  background-color: #007BFF; /* 蓝色背景 */
+  border-radius: 5px; /* 圆角大小，数值可以根据需要调整 */
+  padding: 2px 5px; /* 内边距，使文本与背景边缘有空间 */
+  font-size: 10px;
+  margin-left: 5px;
+  height: 13px;
+  margin-top: 6px;
+}
+
+#page_content {
+  border: none;
+}
