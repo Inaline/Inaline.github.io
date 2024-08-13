@@ -13,7 +13,7 @@ var head = "http://q1.qlogo.cn/g?b=qq&nk=2291374026&s=640"; //头像的路径或
 var sgin = "凌云之志立于氤，至死不渝中国心!"; //个性签名
 var introduction = ""; //个人简介
 var tags = ["未成年","小男娘"]; //个人标签
-var SetupTime = new Date(2024, 7, 8, 16, 39, 05); //建站日期
+var SetupTime = new Date(2024, 8, 13, 10, 00, 00); //建站日期
 var record = "陕ICP备 1145141919810"; //网站备案号
 var pages = [
   {
