@@ -1,0 +1,62 @@
+body {
+  background-color: transparent;
+}
+
+@media (min-width: 400px) {
+  body {
+    background-image: url('/image/bg_7.png'); /* 替换为您的图片URL */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+  }
+}
+
+/* 基本样式 */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.item {
+  width: calc(25% - 10px); /* 减去一半的gap值 */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 当屏幕宽度小于400px时，改变布局 */
+@media screen and (max-width: 400px) {
+  .item {
+    width: calc(50% - 10px); /* 减去gap值 */
+  }
+}
+
+.content_i {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px; /* 圆角 */
+}
+
+/* 图片比例为1:1 */
+.square-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px; /* 圆角 */
+}
+
+/* 固定高度的div */
+.fixed-height-div {
+  height: 50px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
+}

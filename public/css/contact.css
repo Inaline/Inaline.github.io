@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-height: 100vh; /* 最小高度设置为视口高度 */
+  background-color: #FFFFFF00;
+}
+
+@media (max-width: 400px) {
+  #main {
+    width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  #main {
+    width: 100%;
+    border-radius: 10px; /* 圆角 */
+    overflow-y: scroll;
+  }
+
+  body {
+    background-image: url('/image/bg_6.png'); /* 替换为您的图片URL */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+  }
+
+  #main {
+    display: flex;
+    flex-wrap: wrap; /* 允许子元素换行 */
+    justify-content: space-between; /* 在子元素之间分配可用空间 */
+  }
+
+  .item {
+    flex-basis: calc(50% - 10px); /* 每个元素占据一半宽度减去一定的间距 */
+    background-color: #00000055;
+    border-radius: 10px; /* 圆角 */
+    margin-bottom: 10px; /* 底部间距 */
+  }
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item {
+  background-color: #00000055;
+  border-radius: 10px; /* 圆角 */
+  width: 90%;
+  margin: 5px 0px;
+}
+
+.content {
+  padding: 0px 5px;
+  color: #FFFFFF;
+}
+
+.title_bar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.icon_wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FD6A62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.title_bar span {
+  margin-left: 5px;
+}
+
+.ct {
+  transition: all 0.5s ease-in-out; /* 过渡动画 */
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ct.show {
+  max-height: 500px; /* 足够的高度以显示内容 */
+  opacity: 1;
+}
+
+.img {
+  max-width: 90%;   /* 确保图片宽度不超过容器宽度 */
+  max-height: 60vh;  /* 确保图片高度不超过容器高度 */
+  object-fit: cover; /* 保持图片比例，填充容器，裁剪多余部分 */
+  display: block;     /* 移除默认的行内元素行为 */
+  overflow: hidden;
+}
+
+.ct span {
+  min-height: 10px;
+}

@@ -1,0 +1,113 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 400px) {
+  #main {
+    width: 100%;
+    height: 100vh;
+  }
+  #date {
+    font-size: 8vw;
+  }
+
+  #time {
+    font-size: 19vw;
+  }
+  
+  .table {
+    width: 75%; /* 或者根据需要设置宽度 */
+    margin: 20px 0; /* 上下边距 */
+    border-collapse: collapse;
+  }
+  
+  .three .t {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 400px) {
+  #main {
+    background-image: url('/image/bg_4.png'); /* 替换为您的图片URL */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    height: 100vh; /* 最小高度设置为视口高度 */
+    overflow: hidden; /* 如果内容超出，则隐藏多余部分 */
+    width: 100%;
+    border-radius: 10px; /* 圆角 */
+  }
+  #date {
+    font-size: 5vw;
+  }
+
+  #time {
+    font-size: 11vw;
+  }
+  
+  .table {
+    width: 25%; /* 或者根据需要设置宽度 */
+    margin: 20px 0; /* 上下边距 */
+    border-collapse: collapse;
+  }
+  
+  .three .t {
+    font-size: 4.5vw;
+  }
+}
+#main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh; /* 明确的高度 */
+}
+
+#main .content {
+  width: 100%;
+  height: 100vh; /* 足够的高度 */
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+#main .one {
+  color: #FFFFFF;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#main .two {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.two #age {
+  font-size: 29px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #282834;
+  font-weight: bold;
+}
+
+#main .three {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

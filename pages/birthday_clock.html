@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>生辰时钟</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+  <link href="/public/css/birthday_clock.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/public/materialdesignicons.min.css">
+</head>
+<body>
+<div id="loading"></div>
+<div id="main">
+  <div class="content one">
+    <span id="date"></span>
+    <span id="time"></span>
+    <span>请向上划</span>
+  </div>
+  <div class="content two">
+    <span id="age">我已经 12 岁了</span>
+    <h4>我已经来到这个World:</h4>
+    <table class="table" id="tb">
+      <tr>
+        <td id="years">*****年</td>
+        <td id="months">*****月</td>
+        <td id="days">*****日</td>
+      </tr>
+      <tr>
+        <td id="hours">*****时</td>
+        <td id="minutes">*****分</td>
+        <td id="seconds">*****秒</td>
+      </tr>
+    </table>
+  </div>
+  <div class="content three">
+    <span class="t">距下一次生日还有</span>
+    <span id="time_2"> * 天 * 分 * 秒</span>
+  </div>
+</div>
+<script src="/public/dist/js/jquery.min.js"></script>
+<script src="/public/public.js"></script>
+<script src="/public/js/birthday_clock.js"></script>
+</body>
+</html>

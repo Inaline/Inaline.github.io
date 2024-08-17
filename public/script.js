@@ -5,62 +5,13 @@
 * Open source software, free for everyone to use, please mark the original author's name and organization.
 */
 
-
-//定义一些公共的变量
-var titles = ["Inaline的个人主页","Inaline Welcomes you","凌云之志立于氤，至死不渝中国心"]; //标题列表
-var name = "Inaline"; //用户名
-var head = "http://q1.qlogo.cn/g?b=qq&nk=2291374026&s=640"; //头像的路径或者网址
-var sgin = "凌云之志立于氤，至死不渝中国心!"; //个性签名
-var introduction = ""; //个人简介
-var tags = ["未成年","小男娘"]; //个人标签
-var SetupTime = new Date(2024, 7, 13, 10, 00, 00); //建站日期
-var record = "陕ICP备 1145141919810"; //网站备案号
-var pages = [
-  {
-    "icon": "mdi-home",
-    "title": "主页",
-    "url": "/pages/index.html",
-    "icon_color": "#FD6A62"
-  },{
-    "icon": "mdi-account",
-    "title": "个人资料",
-    "url": "/pages/personal_data.html",
-    "icon_color": "#FD6A62"
-  }
-]; //页面列表
-
-
-var currentTitleIndex = 0;
-
-function changeTitle() {
-    document.title = titles[currentTitleIndex];
-    currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-}
-
+// 当页面加载完成后，隐藏加载动画
 window.addEventListener('load', function() {
     const loadingDiv = document.getElementById('loading');
     loadingDiv.style.display = 'none';
-    
-    changeTitle()
-    setInterval(changeTitle, 2500);
 });
 
-
 $(document).ready(function() {
-  var pages = [
-    {
-      "icon": "mdi-home",
-      "title": "主页",
-      "url": "/pages/index.html",
-      "icon_color": "#FD6A62"
-    },
-    {
-      "icon": "mdi-account",
-      "title": "个人资料",
-      "url": "/pages/personal_data.html",
-      "icon_color": "#FD6A62"
-    }
-  ];
 
   function createItemHtml(index, page) {
     var html = `
@@ -104,7 +55,6 @@ function ChangePage(num) {
   }
 }
 
-
 function formatTimeDifference(date) {
   const now = new Date();
   const diff = now - date;
@@ -114,7 +64,7 @@ function formatTimeDifference(date) {
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  return `${record} | 本站已安全运行${days}天${hours}小时${minutes}分钟${seconds}秒`;
+  return `${record} | 本站已运行${days}天${hours}小时${minutes}分钟${seconds}秒`;
 }
 
 $(document).ready(function() {

@@ -1,0 +1,69 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-height: 100vh; /* 最小高度设置为视口高度 */
+}
+
+@media (max-width: 400px) {
+  #main {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 400px) {
+  #main {
+    width: 100%;
+    border-radius: 10px; /* 圆角 */
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  body {
+    background-image: url('/image/bg_2.png'); /* 替换为您的图片URL */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+  }
+}
+
+#main .content {
+  margin: 5%;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px; /* 圆角 */
+}
+
+#main .content .hello {
+  font-size: 32px;
+}
+
+#main .content .introduce {
+  font-size: 26px;
+}
+
+#main .content .information {
+  font-size: 26px;
+}
+
+/* 只包含表格相关的样式 */
+.profile-table {
+  width: 100%; /* 或者根据需要设置宽度 */
+  margin: 20px 0; /* 上下边距 */
+  border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.profile-table th {
+  background-color: #282834;
+  font-weight: bold;
+}

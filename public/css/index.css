@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 400px) {
+  #main {
+    width: 100%;
+    height: 100vh;
+  }
+  #main .one .msg {
+    margin-top: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+  }
+  #main .def p {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 400px) {
+  #main {
+    background-image: url('/image/bg_3.png'); /* 替换为您的图片URL */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    height: 100vh; /* 最小高度设置为视口高度 */
+    overflow: hidden; /* 如果内容超出，则隐藏多余部分 */
+    width: 100%;
+    border-radius: 10px; /* 圆角 */
+  }
+  #main .one .msg {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+  }
+  #main .def p {
+    margin: 5px 5%;
+  }
+}
+#main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh; /* 明确的高度 */
+}
+
+#main .content {
+  width: 100%;
+  height: 100vh; /* 足够的高度 */
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+#main .one {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#main  .one .t {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main .one .t .title {
+  font-size: 50px;
+  color: #FFFFFF;
+}
+
+#main .one .t span {
+  color: #FFFFFF;
+}
+
+#main .def {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}
+
+#main .def span {
+  font-size: 35px;
+}

@@ -1,0 +1,88 @@
+/* 当屏幕宽度小于等于400px时的样式 */
+@media (max-width: 400px) {
+  #main {
+    width: 100%;
+    overflow-y: scroll; /* 添加滚动条 */
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+  }
+
+  .item {
+    width: 100%; /* 明确宽度 */
+  }
+  
+  body {
+    background-color:transparent;
+  }
+}
+
+/* 当屏幕宽度大于400px时的样式 */
+@media (min-width: 400px) {
+  #main {
+    width: 100%;
+    border-radius: 10px; /* 圆角 */
+    overflow-y: scroll; /* 添加滚动条 */
+    display: flex;
+    flex-direction: row; /* 水平排列 */
+    flex-wrap: wrap; /* 换行 */
+  }
+
+  .item {
+    flex: 0 0 50%; /* 占据50%宽度 */
+    width: 50%; /* 明确宽度 */
+  }
+
+  body {
+    background-image: url('/image/bg_5.png'); /* 背景图 */
+    background-size: cover; /* 图片会根据容器大小调整大小并保持原始宽高比 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .content {
+  background-color: #FFFFFF;
+  width: 95%;
+  margin: 20px;
+  border-radius: 10px; /* 圆角 */
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  width: 5px;
+  height: 22px;
+  margin: 0 5px;
+  background-color: #FD6A62;
+}
+
+#name {
+  font-size: 20px;
+}
+
+.ct {
+  margin: 5px 0;
+}
+
+.ct span {
+  color: #555;
+}
+
+.category span {
+  margin-right: 5px;
+}
