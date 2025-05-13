@@ -83,7 +83,7 @@ var information = [
     "value": "Inaline(昵称)"
   },{
     "name": "性别",
-    "value": "T.F"
+    "value": "男"
   },{
     "name": "年龄",
     "value": age,
@@ -98,7 +98,7 @@ var information = [
     "value": "中国·陕西·西安"
   },{
     "name": "手机",
-    "value": "+86 1** **** ****"
+    "value": "+86 132 **** 3218"
   },{
     "name": "邮箱",
     "value": "InalineNET@outlook.com"
@@ -110,53 +110,25 @@ var information = [
 var educate_introduction = "";//受教育的简介
 var educate_info = [
   {
-    "school": "李家坪村教学点",
-    "school_grade": "教学点",
-    "school_introduction": "李家坪村教学点是一所位于陕西西安某乡村的教学点，总面积不过200㎡可谓是极小了。学生最多时也才20余人。不过2020年，此教学点已被撤除。",
-    "school_url": "javascript:alert('本学校没有官网')",
-    "start_time": "2017年末",
-    "graduation_time": "2019年末",
-    "recall": [
-      {
-        "title": "",
-        "image": ["",""],
-        "content": ""
-      }
-    ]
-  },{
-    "school": "张家坪村九年制学校",
-    "school_grade": "九年制寄宿学校",
-    "school_introduction": "张家坪村九年制学校是一所普通乡村寄宿制学校，占地20余亩。有在校学生200余人。不过，在2021年9月18日因为洪灾被迫撤除。",
-    "school_url": "javascript:alert('本学校没有官网')",
-    "start_time": "2020年初",
-    "graduation_time": "2021年初",
-    "recall": [
-      {
-        "title": "",
-        "image": ["",""],
-        "content": ""
-      }
-    ]
-  },{
-    "school": "三官庙镇中心学校",
-    "school_grade": "寄宿制小学",
-    "school_introduction": "蓝田县三官庙镇中心学校是西安市蓝田县的一所小学，位于陕西省西安市蓝田县三官庙镇三官庙村委会。</br>此学校只做灾后暂时安置学校，因此仅入学1月。",
-    "school_url": "javascript:alert('本学校没有官网')",
-    "start_time": "2021年9月",
-    "graduation_time": "2021年10月",
-    "recall": [
-      {
-        "title": "",
-        "image": ["",""],
-        "content": ""
-      }
-    ]
-  },{
     "school": "玉山镇前程小学",
     "school_grade": "寄宿制小学",
     "school_introduction": "蓝田县玉山镇前程小学学前班位于陕西西安市蓝田县。是一所公办的小学。更多详情请看官网介绍。",
     "school_url": "https://hdpx.webtrn.cn/entity/first/schoolMain_toMain.action?schoolId=ff8080814941b47a014947f278470b20",
-    "start_time": "2021年末",
+    "start_time": "2017年末",
+    "graduation_time": "2024年初",
+    "recall": [
+      {
+        "title": "",
+        "image": ["",""],
+        "content": ""
+      }
+    ]
+  },{
+    "school": "蓝田县滋水初级中学",
+    "school_grade": "寄宿制初级中学",
+    "school_introduction": "滋水初级中学以“润泽学生 涵养教师 提升学校 造福社会”为办学理念，将学生的心理健康教育和教育教学有机结合，努力营造温馨、和谐、向善、向美的育人环境。",
+    "school_url": "https://zishuischool.com",
+    "start_time": "2017年末",
     "graduation_time": "2024年初",
     "recall": [
       {
@@ -170,21 +142,12 @@ var educate_info = [
 var project = [
   {
     "name": "凌云阁 - Inaline Novel",
-    "introduction": "凌云阁(Inaline Novel)是一个精心打造的在线小说阅读平台，它不仅支持网页浏览，还有专门的Android客户端。通过简洁易用的界面，用户可以轻松沉浸在精彩的故事世界中。凌云阁采用PHP开发，拥有丰富的功能和良好的用户体验。此项目已经开源到GitHub，欢迎贡献者加入。",
+    "introduction": "凌云阁(Inaline Novel)是一个精心打造的在线小说阅读平台，它不仅支持网页浏览，还有专门的Android客户端。通过简洁易用的界面，用户可以轻松沉浸在精彩的故事世界中。凌云阁采用PHP开发，拥有丰富的功能和良好的用户体验。此项目预计开源到GitHub，欢迎贡献者加入。",
     "category": ["php", "android"],
     "startDate": "2024-7-01",
     "status": "开发中",
     "demo": "http://inaline.us.kg/",
     "github": "https://github.com/Inaline/Inaline_Novel/"
-  },
-  {
-    "name": "Safe Cat",
-    "introduction": "安全猫(Safe_Cat)是一款创新的安卓应用，它允许用户在桌面上养一只可爱的虚拟猫咪。这只小猫不仅是你的桌面伴侣，还能帮助你监控手机的安全状况。它会在需要的时候提醒你注意潜在的安全风险，让你的手机得到更好的保护。",
-    "category": ["android"],
-    "startDate": "2024-8-01",
-    "status": "开发中",
-    "demo": "http://safe_cat.inaline.us.kg/",
-    "github": "https://github.com/Inaline/Safe_Cat/"
   }
 ];//项目列表
 
